@@ -15,7 +15,7 @@ async def on_ready():
 
 @bot.command(name='rank', help='Determines the rank of the team.')
 async def get_rank(ctx, team):
-    event = "2020/USGANGM4"
+    event = "2020/USGANGM5"
     rank, rp = evt.get_rank(event, team), evt.get_ranking_points(event, team)
     response = 'Team {} is rank {} with {} RP'.format(team, rank, rp)
     await ctx.send(response)

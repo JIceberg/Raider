@@ -10,8 +10,8 @@ def get_event_info(event: str, team_number: str):
             soup = BeautifulSoup(page.content, 'html.parser')
             team_row = soup.find('a', string=team_number).find_parent('tr')
 
-            info['rank'] = int(team_row.findAll('td')[0].getText())
-            info['rp'] = int(team_row.findAll('td')[2].getText())
+            info['rank'] = team_row.findAll('td')[0].getText()
+            info['rp'] = team_row.findAll('td')[2].getText()
     
     return info
 
