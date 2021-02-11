@@ -28,4 +28,8 @@ async def get_scoring(ctx):
 async def peepeepoopoo(ctx):
     await ctx.send('peepeepoopoo')
 
+@bot.command(name='stats', help='Link to FTC Stats')
+async def get_stats(ctx):
+    await ctx.send('http://www.ftcstats.org/2021/index.html')
+
 bot.run(TOKEN)
