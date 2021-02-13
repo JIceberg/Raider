@@ -32,4 +32,9 @@ async def peepeepoopoo(ctx):
 async def get_stats(ctx):
     await ctx.send('http://www.ftcstats.org/2021/index.html')
 
+@bot.event
+async def on_message(message):
+    if "https://tenor.com/view/sonic-shadow-love-pog-big-chungus-gif-16580004" in message.content:
+        await message.delete()
+
 bot.run(TOKEN)
