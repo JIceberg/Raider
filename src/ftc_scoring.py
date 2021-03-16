@@ -46,11 +46,11 @@ def lookup_team(team):
 
 def get_rank(team) -> str:
     data = lookup_team(team)
-    if not data:
+    if 'rank' not in data:
         return "Could not find team!"
-    res =  data["team_name"] + " is rank " + data["rank"]
+    res = data["team_name"] + " is rank " + data["rank"]
     res += " globally with an OPR of " + data["opr"] + "."
-    if not data['state_rank']:
+    if 'state_rank' not in data:
         return res
     else:
         return res + " In Georgia, the team is rank " + data['state_rank'] + "."
